@@ -1,37 +1,7 @@
-## Welcome to GitHub Pages
+## 欢迎来到我的博客记录仓库
 
-You can use the [editor on GitHub](https://github.com/yuzhounanhai/yuzhounanhai.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+这里存放的是使用 hexo 快速搭建的 github pages 个人博客源码，您也可以访问以下链接到我的github个人博客。
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+> https://yuzhounanhai.github.io
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/yuzhounanhai/yuzhounanhai.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+在海的南边，有一片宇宙！宇宙无垠，而探索无尽，是该同懒癌佛系奋斗！
