@@ -516,4 +516,4 @@ Object.defineProperty(data, key, {
 
 ## 源码
 
-本文所有的代码存放在 [我的GitHub仓库](https://github.com/yuzhounanhai/yuzhounanhai.github.io/tree/master/projects/mvvm) 中。
+本文所有的代码存放在 [我的GitHub仓库](https://github.com/yuzhounanhai/yuzhounanhai.github.io/tree/master/project/mvvm) 中。
