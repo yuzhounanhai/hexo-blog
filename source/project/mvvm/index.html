@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>mvvm</title>
+    <style type="text/css">
+        .red {
+            width: 200px;
+            height: 50px;
+            line-height: 50px;
+            background-color: red;
+            color: #ffffff;
+            cursor: pointer;
+            text-align: center;
+            user-select: none;
+        }
+        .blue {
+            width: 200px;
+            height: 50px;
+            line-height: 50px;
+            background-color: blue;
+            color: #ffffff;
+            cursor: pointer;
+            text-align: center;
+            user-select: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="mvvm">
+        <p>{{name}}</p>
+        <input type="text" name="name" v-model="name"/>
+        <button @click="changeNum">{{num}}</button>
+        <div :class="color" v-on:click="changeColor">
+            <span>点击切换颜色</span>
+            <span>{{ color }}</span>
+        </div>
+        <p v-bind:title="tip">鼠标移动到上面查看文档初次加载时间</p>
+    </div>
+    <script type="text/javascript" src="compile.js"></script>
+    <script type="text/javascript" src="observe.js"></script>
+    <script type="text/javascript" src="compileUtils.js"></script>
+    <script type="text/javascript" src="dep.js"></script>
+    <script type="text/javascript" src="watcher.js"></script>
+    <script type="text/javascript" src="mvvm.js"></script>
+    <script type="text/javascript">
+        var mvvm = new MVVM({
+            el: "#mvvm",
+            data: {
+                name: 'dida',
+                num: 1,
+                color: "red",
+                tip: "文档加载于：" + new Date().toLocaleString()
+            },
+            methods: {
+                changeNum: function () {
+                    this.num++;
+                },
+                changeColor: function () {
+                    this.color = this.color === 'red' ? 'blue' : 'red';
+                }
+            }
+        })
+    </script>
+</body>
+</html>
