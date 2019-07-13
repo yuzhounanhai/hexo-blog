@@ -40,10 +40,19 @@
     var $this = $(this),
       url = $this.attr('data-url'),
       title = $this.attr('data-title'),
-      encodedUrl = encodeURIComponent(url),
+      encodedUrl = null,
       id = 'article-share-box-' + $this.attr('data-id'),
       offset = $this.offset();
-
+    if (url) {
+      var urlSplit = url.split("/");
+      if (urlSplit && urlSplit.length) {
+        var titlePos = urlSplit.length - 2;
+        if (urlSplit[titlePos] === title) {
+          urlSplit[titlePos] = encodeURIComponent(title);
+          encodedUrl = urlSplit.join("/");
+        }
+      }
+    }
     if ($('#' + id).length){
       var box = $('#' + id);
 
@@ -57,7 +66,7 @@
     } else {
       var html = [
         '<div id="' + id + '" class="article-share-box">',
-          '<input class="article-share-input" value="' + title + ' ' + url + '">',
+          '<input class="article-share-input" value="' + title + ' ' + encodedUrl + '">',
         '</div>'
       ].join('');
 
