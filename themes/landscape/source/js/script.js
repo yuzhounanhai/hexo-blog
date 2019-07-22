@@ -47,8 +47,8 @@
       var urlSplit = url.split("/");
       if (urlSplit && urlSplit.length) {
         var titlePos = urlSplit.length - 2;
-        if (urlSplit[titlePos] === title) {
-          urlSplit[titlePos] = encodeURIComponent(title);
+        if (urlSplit[titlePos]) {
+          urlSplit[titlePos] = encodeURIComponent(urlSplit[titlePos]);
           encodedUrl = urlSplit.join("/");
         }
       }
