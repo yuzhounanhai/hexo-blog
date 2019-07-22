@@ -1,5 +1,9 @@
 ---
 title: 浅析Redux实现原理
+categories:
+- 前端
+tags:
+- Redux
 ---
 
 *本文整理自 [React状态管理与同构实战](http://www.broadview.com.cn/book/5012) 一书，部分内容略有不同。若您对更多内容感兴趣，可以尝试购买。*

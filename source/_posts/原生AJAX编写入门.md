@@ -1,5 +1,10 @@
 ---
 title: 原生AJAX编写入门
+categories:
+- 前端
+tags:
+- http
+- JS
 ---
 
 AJAX（Asynchronous Javascript And XML，异步Javascript和XML）是一种无需重新加载整个网页的情况下，能够更新部分网页的技术。

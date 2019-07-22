@@ -1,5 +1,9 @@
 ---
 title: HTTP协议总结归纳
+categories:
+- 网络通信
+tags:
+- http
 ---
 
 ## 概述

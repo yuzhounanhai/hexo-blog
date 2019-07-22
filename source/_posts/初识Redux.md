@@ -1,5 +1,9 @@
 ---
 title: 初识Redux
+categories:
+- 前端
+tags:
+- Redux
 ---
 
 ## Redux定义

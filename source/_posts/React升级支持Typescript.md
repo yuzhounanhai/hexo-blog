@@ -1,5 +1,10 @@
 ---
 title: React 升级支持 Typescript
+categories:
+- 前端
+tags:
+- React
+- TS
 ---
 
 注意：本篇内容不完整，后续会不定时填充内容！

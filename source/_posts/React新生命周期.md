@@ -1,5 +1,9 @@
 ---
 title: React v16.3 新生命周期
+categories:
+- 前端
+tags:
+- React
 ---
 
 React打算在 v17 版本推出新的 Async Rendering，提出一种可被打断的生命周期的形式，并在 v16 版本中为即将上线的这一功能做出兼容升级。（生命周期一旦被打断，下次恢复的时候又会再跑一次之前的生命周期，因此 `componentWillMount`，`componentWillReceiveProps`， `componentWillUpdate` 都不能保证只在挂载/拿到props/状态变化的时候刷新一次）

@@ -1,5 +1,10 @@
 ---
 title: 深入了解AJAX
+categories:
+- 前端
+tags:
+- http
+- JS
 ---
 
 AJAX允许浏览器在无需刷新的情况下，异步的更新界面。
