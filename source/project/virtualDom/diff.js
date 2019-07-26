@@ -72,7 +72,7 @@ function dfsWalk(oldNode, newNode, index, patches) {
             type: PATCHES_TYPE.REMOVE
         });
 
-        // 删除了但依旧要遍历旧数的节点确保 Index 正确
+        // 删除了但依旧要遍历旧树的节点确保 Index 正确
         diffHelper.dfsChildren(oldNode);
     } else if (diffHelper.isTextNode(oldNode) && diffHelper.isTextNode(newNode)) {
         // 都是纯文本节点 如果内容不同，产生一个关于 textContent 的 patch
@@ -102,7 +102,7 @@ function dfsWalk(oldNode, newNode, index, patches) {
             type: PATCHES_TYPE.REPLACE,
             node: newNode
         });
-        // 替换了但依旧要遍历旧数的节点确保 Index 正确
+        // 替换了但依旧要遍历旧树的节点确保 Index 正确
         diffHelper.dfsChildren(oldNode);
     }
 
