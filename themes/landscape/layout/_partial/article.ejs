@@ -12,14 +12,22 @@
     <% } %>
     <div class="article-entry" itemprop="articleBody">
       <% if (post.excerpt && index){ %>
-        <%- post.excerpt %>
+        <% if (post.isLock) { %>
+          <p><b>该文章因为特殊原因暂时被锁定，无法阅读，您可以先行阅读其他文章内容。</b><p>
+        <% } else {%>
+          <%- post.excerpt %>
+        <% } %>
         <% if (theme.excerpt_link){ %>
           <p class="article-more-link">
             <a href="<%- url_for(post.path) %>#more"><%= theme.excerpt_link %></a>
           </p>
         <% } %>
       <% } else { %>
-        <%- post.content %>
+        <% if (post.isLock) { %>
+          <p><b>该文章因为特殊原因暂时被锁定，无法阅读，您可以先行阅读其他文章内容。</b><p>
+        <% } else {%>
+          <%- post.content %>
+        <% } %>
       <% } %>
     </div>
     <footer class="article-footer">
