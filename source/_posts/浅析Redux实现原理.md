@@ -522,9 +522,12 @@ React 的 context 特性，提供了一个无需为每层组件手动添加 prop
 const ReactReduxContext = React.createContext(null);
 
 export default class Provider extends React.Component {
-    constructor(props, context) {
-        super(props, context)
+    constructor(props) {
+        super(props)
         const { store } = props
+        this.state = {
+            store
+        }
     }
 
     render() {
