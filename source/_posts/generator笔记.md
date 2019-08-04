@@ -1,6 +1,5 @@
 ---
 title: generator摘录笔记
-isLock: true
 categories:
 - 其他
 tags:
