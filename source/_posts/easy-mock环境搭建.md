@@ -18,6 +18,8 @@ EasyMock 是一个开源的数据模拟项目，可以模拟接口报文返回�
 + Mongodb
 + Redis
 
+<!-- more -->
+
 #### 安装 NVM
 
 nvm 是 node 包管理工具，可以使用 nvm 命令对当前系统环境使用的 node 版本进行切换。
@@ -44,6 +46,14 @@ nvm list
 #### 安装并启动Mongodb
 
 详细安装教程：https://www.jianshu.com/p/8e23ea81b7f5
+
+该文错误之处：
+
+使用配置文件注册MongoDB服务，名称为"MongoDB"，cmd命令行执行：
+
+```
+mongod -f "F:\MongoDB\mongodb.conf" -install -serviceName "MongoDB"
+```
 
 #### 安装Redis
 
@@ -122,3 +132,20 @@ EasyMock运行在7300端口，如要修改端口，可在项目文件夹下：co
 #### EasyMock使用
 
 EasyMock需要注册帐号使用，EasyMock具体的功能会在项目中有文档说明。
+
+###### 忘记密码但记得用户名
+
+由于并不存在找回密码的功能，但因为所有的数据都存储在mongodb中，因此可以通过mongodb的命令行进行修改
+
+```
+# 使用easy-mock这一数据库
+use easy-mock
+
+# 修改 查询用户名为nanhai的用户并对查询到的记录进行 修改password字段的操作
+# 这一加密的密码代表123456
+db.users.update({name: 'nanhai'},{$set: {password: '$2a$08$4W5lsAqwiVw4FHuUvsR1J.YnF9WTmljR.goe7BQTtFo5WEzpG/r0K'}})
+```
+
+##### 忘记用户名
+
+当用户少时，可以通过 `db.users.find()` 来打印用户表所有的用户记录。
