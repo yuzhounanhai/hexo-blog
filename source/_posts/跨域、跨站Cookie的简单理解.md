@@ -35,8 +35,8 @@ tags:
 
 相关示例如下:
 
-:--:|:--:|:--:
 URL|结果|原因
+:--:|:--:|:--:
 http://www.example.com/dir/page2.html|是|只有路径不同
 http://www.example.com/dir2/other.html|是|只有路径不同
 http://username:password@www.example.com/dir2/other.html|是|只有路径不同
@@ -151,8 +151,8 @@ MDN 英文版中有如下说明:
 
 这意味着, 对于跨站的请求, 即便前端设置了 `XMLHttpRequest.withCredentials = true`, 那么是否发送 Cookie 还将取决于浏览器中 `Cookie` 的 `SameSite` 属性.
 
-:--:|:--:|:--:|:--:|:--:|:--:
 请求类型|实例|以前|Strict|Lax|None
+:--:|:--:|:--:|:--:|:--:|:--:
 链接|``<a href="..."></a>``|发送 Cookie|不发送|发送 Cookie|发送 Cookie
 预加载|``<link rel="prerender" href="..."/>``|发送 Cookie|不发送|发送 Cookie|发送 Cookie
 GET 表单|``<form method="GET" action="...">``|发送 Cookie|不发送|发送 Cookie|发送 Cookie
